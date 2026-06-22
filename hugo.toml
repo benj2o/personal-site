@@ -1,4 +1,66 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://benj2o.github.io/personal-site/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'Benji'
 theme = 'PaperMod'
+
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = 'production'
+  author = 'BC'
+  description = 'Notes, essays, and projects from a curious mind.'
+  defaultTheme = 'light'
+  disableThemeToggle = true
+  hideFooter = true
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  DateFormat = 'January 2, 2006'
+  mainSections = ['posts']
+
+  [params.homeInfoParams]
+    Title = 'Benji'
+    Content = 'Essays, notes, and project traces from a curious mind. The goal is a small body of work that rewards careful reading.'
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'writing'
+    name = 'Writing'
+    url = 'posts/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'notes'
+    name = 'Notes'
+    url = 'notes/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'portfolio'
+    name = 'Portfolio'
+    url = 'portfolio/'
+    weight = 40
+  [[menu.main]]
+    identifier = 'reading'
+    name = 'Reading'
+    url = 'books/'
+    weight = 50
+  [[menu.main]]
+    identifier = 'categories'
+    name = 'Categories'
+    url = 'categories/'
+    weight = 60
