@@ -2,12 +2,12 @@
 title: "Q-Summit Hackathon"
 date: 2025-04-01
 role: "Team Lead and Hackathon Winner"
-summary: "Led a team to first place with an AI-agent staffing platform tailored for Exxeta, a EUR 500m consultancy."
+summary: "Winning my first ever hackathon was quite easy actually ;)"
 tags: ["ai-agents", "leadership", "product"]
 hideMeta: true
 searchHidden: true
 ---
 
-Led the winning team for a corporate hackathon challenge centered on AI-agent staffing for a large consultancy environment.
+Okay, maybe not that easy. Staying up through the night turned out to be incredibly taxing, especially with the presentations and pitches waiting the next day.
 
-The project required a fast product judgment: turn a broad automation prompt into a credible workflow with enough enterprise specificity to be judged useful.
+Over a few hours, my team and I at Dreamshack built an agentic staffing platform for Exxeta. The useful part was how quickly the problem became concrete once sleep stopped being an option.

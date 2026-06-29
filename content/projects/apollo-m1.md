@@ -2,12 +2,13 @@
 title: "Apollo-M1"
 date: 2026-04-01
 role: "Robotics Research, Apollo Robotics"
-summary: "Prototype work on a construction and residential painting robot, with emphasis on practical deployment constraints."
+summary: "YC Co-Founder Matching and cool robots."
+previewImage: "images/apollo-m1.png"
 tags: ["robotics", "construction", "automation"]
 hideMeta: true
 searchHidden: true
 ---
 
-Prototype work for a painting robot intended for construction and residential environments.
+Apollo-M1 started, somewhat absurdly, with YC Co-Founder Matching and a shared interest in building cool robots.
 
-The project emphasized a practical robotics question: how to move from a controlled demonstration toward a system that can tolerate messy physical spaces, surface variation, and operator constraints.
+The actual problem was less glamorous: how do you make a painting robot useful outside a clean demo, where walls are uneven, surfaces change, and everything is slightly more annoying than expected?

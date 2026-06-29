@@ -9,9 +9,6 @@
       {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
       {{- if .Date }}<span>{{ .Date.Format "January 2006" }}</span>{{- end }}
     </div>
-    {{- with .Params.summary }}
-    <p class="locked-story-summary">{{ . }}</p>
-    {{- end }}
   </header>
 
   <div class="locked-story-teaser md-content">
@@ -31,9 +28,17 @@
 <div class="member-modal" data-member-modal aria-hidden="true">
   <div class="member-modal-panel" role="dialog" aria-modal="true" aria-labelledby="member-modal-title">
     <button class="member-modal-close" type="button" data-member-close aria-label="Close">Close</button>
-    <p class="eyebrow">Membership</p>
-    <h2 id="member-modal-title">Access is closed</h2>
-    <p>Membership is currently invite-only and closed to new readers.</p>
+    <p class="eyebrow">Private access</p>
+    <h2 id="member-modal-title">Thank you for your interest in signing up.</h2>
+    <p>To protect readers from spam, this site asks you to request access with your email below.</p>
+    <form class="member-form" data-member-form>
+      <label for="member-email">Email</label>
+      <div class="member-form-row">
+        <input id="member-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required>
+        <button class="member-button" type="submit">Request access</button>
+      </div>
+      <p class="member-form-note">This opens a prefilled email request. Static GitHub Pages cannot store signups directly.</p>
+    </form>
   </div>
 </div>
 
@@ -42,12 +47,15 @@
     const modal = document.querySelector("[data-member-modal]");
     const open = document.querySelector("[data-member-open]");
     const close = document.querySelector("[data-member-close]");
+    const form = document.querySelector("[data-member-form]");
+    const email = document.querySelector("#member-email");
 
-    if (!modal || !open || !close) return;
+    if (!modal || !open || !close || !form || !email) return;
 
     const show = () => {
       modal.setAttribute("aria-hidden", "false");
       document.body.classList.add("member-modal-open");
+      window.setTimeout(() => email.focus(), 80);
     };
 
     const hide = () => {
@@ -57,6 +65,17 @@
 
     open.addEventListener("click", show);
     close.addEventListener("click", hide);
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!email.checkValidity()) {
+        email.reportValidity();
+        return;
+      }
+
+      const subject = encodeURIComponent("Access request for {{ .Title }}");
+      const body = encodeURIComponent(`Hi Benji,\n\nI would like to request access to "{{ .Title }}".\n\nEmail: ${email.value}\n`);
+      window.location.href = `mailto:{{ site.Params.profile.email }}?subject=${subject}&body=${body}`;
+    });
     modal.addEventListener("click", (event) => {
       if (event.target === modal) hide();
     });

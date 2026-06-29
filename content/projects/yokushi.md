@@ -2,12 +2,12 @@
 title: "Yokushi"
 date: 2018-01-01
 role: "Founder"
-summary: "Founded at 15, built multi-channel storefronts, and reached EUR 10k revenue in under 40 days."
+summary: "How I made my very first few Euros working for myself."
 tags: ["founder", "commerce", "automation"]
 hideMeta: true
 searchHidden: true
 ---
 
-Founded and operated a multi-channel commerce business as a teenager, funded through manual labor and built across Shopify and eBay.
+For as long as I can remember, I have been interested in gaming the system. Not out of spite or malicious intent, but because almost everything felt inefficient and not very well thought through.
 
-The important lesson was operational: inventory, pricing, fulfillment, and automation mattered more than surface-level entrepreneurship language.
+Yokushi was my first serious attempt at making money by myself. I was 15, selling odd things online, and realizing that entrepreneurship is often just noticing a small arbitrage before everyone else does.

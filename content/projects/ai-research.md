@@ -2,12 +2,12 @@
 title: "AI Research"
 date: 2026-04-01
 role: "Independent Research, School of Engineering"
-summary: "Backtested VLM token-pruning methods, built medical spatial-annotation tooling, and tested attention-sink hallucination signals."
+summary: "What gets thrown away when a vision-language model learns to look."
 tags: ["vlm", "medical-ai", "evaluation"]
 hideMeta: true
 searchHidden: true
 ---
 
-Independent research across loss-efficient token pruning for vision-language models, medical diagram annotation, and hallucination-signal evaluation.
+I started with a simple irritation: models look at everything, but that does not mean they understand what matters. So I tested what could be removed without collapsing performance.
 
-The work combined backtesting, platform engineering, real-time segmentation overlays, and a negative result: attention sinks did not produce a useful hallucination signal for Llama 3 on TruthfulQA.
+That led into token pruning, medical annotation, and a failed hallucination signal. The failure was useful. Attention sinks sounded elegant, then looked almost useless on TruthfulQA.

@@ -18,12 +18,15 @@ enableRobotsTXT = true
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
-  ShowBreadCrumbs = true
+  ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
   ShowToc = true
   TocOpen = false
   DateFormat = 'January 2, 2006'
   mainSections = ['projects']
+
+  [params.label]
+    text = 'BC'
 
   [params.profile]
     name = 'Benjamin Chen'
@@ -33,13 +36,12 @@ enableRobotsTXT = true
     email = 'benjaminchen.applications@gmail.com'
     phone = '+49 1573 0175706'
     image = 'images/profile.png'
-    languages = 'English, German, Chinese (HSK5)'
+    languages = 'English, German, Chinese, Spanish (currently learning)'
     interests = [
       'World models and JEPA',
-      'Vision-language systems',
-      'Robotics and autonomy',
-      'Geospatial data management',
-      'Technical systems and strategy'
+      'Robotics and general autonomy',
+      'Healthcare and Bio',
+      'Philosophy & Self-improvement'
     ]
     education = [
       'Technical University Munich, Aerospace Engineering coursework, 4.0/4.0 GPA (WES)',
@@ -48,12 +50,8 @@ enableRobotsTXT = true
     ]
 
     [[params.profile.links]]
-      name = 'Email'
-      url = 'mailto:benjaminchen.applications@gmail.com'
-
-    [[params.profile.links]]
-      name = 'GitHub'
-      url = 'https://github.com/benj2o'
+      name = 'LinkedIn'
+      url = 'https://www.linkedin.com/in/benjamin-zhian-chen/'
 
 [taxonomies]
   category = 'categories'

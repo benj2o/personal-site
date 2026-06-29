@@ -6,7 +6,6 @@
 <section class="profile-shell">
   <div class="profile-main">
     <header class="profile-header">
-      <p class="eyebrow">Research profile</p>
       <h1>{{ $profile.name | default site.Title }}</h1>
       <p class="profile-subtitle">{{ $profile.tagline }}</p>
     </header>
@@ -20,7 +19,6 @@
     <section class="project-feed" aria-labelledby="projects-heading">
       <div class="section-heading">
         <h2 id="projects-heading">Projects</h2>
-        <p>Brief research and execution notes. Full entries are limited to members.</p>
       </div>
 
       {{- if gt (len $projects) 0 }}
@@ -40,10 +38,17 @@
               <p>{{ .Summary | plainify | htmlUnescape }}</p>
               {{- end }}
               <div class="project-card-footer">
-                <span class="lock-pill">Member preview</span>
-                <span class="read-time">Brief preview</span>
+                <span>Members only</span>
+                <span>Preview</span>
               </div>
             </div>
+            {{- with .Params.previewImage }}
+              {{- $img := resources.Get . }}
+              {{- if $img }}
+                {{- $thumb := $img.Fill "160x108 Center" }}
+                <img class="project-thumb" src="{{ $thumb.RelPermalink }}" width="160" height="108" alt="">
+              {{- end }}
+            {{- end }}
           </a>
         </article>
         {{- end }}

@@ -2,12 +2,13 @@
 title: "MIA-1"
 date: 2026-04-02
 role: "Robotics Research, Apollo Robotics"
-summary: "Prototype work on an autonomous drone defense concept, focused on sensing, autonomy, and deployment realism."
+summary: "Rifle-mounted turret for autonomous drone defense."
+previewImage: "images/mia-1.png"
 tags: ["robotics", "autonomy", "defense"]
 hideMeta: true
 searchHidden: true
 ---
 
-Prototype work on an autonomous drone defense system, positioned at the intersection of sensing, autonomy, and practical operational constraints.
+Scarily, war has always evolved and, generally speaking, been a great driver of innovation. Unfortunately this now means the large-scale use of drones armed with explosives.
 
-The research question was not only whether the system could work in principle, but what assumptions would break when moved from prototype context into live environments.
+MIA-1 was a rifle-mounted turret for autonomous drone defense. The question was not autonomy in the abstract. It was how quickly a system can sense, decide, and act before the window has already closed.

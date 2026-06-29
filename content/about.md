@@ -1,33 +1,17 @@
 ---
 title: "About"
-description: "Institutional profile for Benjamin Chen."
+hideMeta: true
+ShowToc: false
 ---
 
-Benjamin Chen is a student at the Technical University Munich working across aerospace engineering coursework, AI research, robotics, and applied technical systems.
+Hey, my name is Benji. I was born and raised in Aachen by two engineers, together with my older brother, who is now becoming a doctor.
 
-His current research work at the TUM Chair of Geospatial Data Management focuses on world models, including JEPA, generative video, and foundation world-model paradigms such as Cosmos, V-JEPA, and Genie. Earlier independent work covered loss-efficient token pruning for vision-language models, medical diagram annotation, and hallucination-signal evaluation on Llama 3.
+For as long as I can remember, I have been fascinated by space, the stars, and life beyond them. I am currently studying aerospace, doing AI research at TUM, and plan to start my Master's in Management in August.
 
-Benjamin previously studied Business Administration at the University of Mannheim and has experience across private equity, venture capital, corporate strategy, founder-associate work, and entrepreneurship. He has built technical and commercial systems ranging from a subsidiary analytics tool deployed across 36+ global units to a multi-channel storefront founded at age 15.
+I had my first little company when I was 15. It was called Yokushi, and it taught me that I am a builder at heart. I have been fortunate enough to work across strategy, startups, venture capital, and private equity, but deep down I have always been and always will be a founder.
 
-## Education
+I think we are living through a scary but potentially fruitful period of time, with technological change advancing faster than ever before. Taking from Mira Murati, if we assume we have more agency and control than we believe, then we should do our best to steer humanity in a positive direction.
 
-- **Technical University Munich**, Aerospace Engineering coursework, Sep 2025 to present. Current GPA: 4.0/4.0 (WES). Invited to EF Selection Days in London. GMAT Focus 715, top <1%.
-- **University of Mannheim**, BSc Business Administration, Sep 2022 to Sep 2025. GPA: 4.0/4.0 (WES). Third place, annual KPMG competition. Exchange at Singapore Management University, top 2%.
+In my free time I love to read and cook. They are probably my two favorite hobbies, besides sports of course. In Munich we have the Eisbach very close to my house, so I can go running and then take a quick dip or swing into the river almost every day.
 
-## Selected Experience
-
-- **AI Research, TUM Chair of Geospatial Data Management**, Jun 2026 to present. Engineering practical on world models under Prof. Dr. Martin and Dr. Poku-Agyemang.
-- **Independent AI Research, School of Engineering**, Apr 2026 to Jun 2026. VLM pruning, medical spatial annotation tooling, and hallucination-signal evaluation.
-- **Robotics Research, Apollo Robotics**, Apr 2026 to Jun 2026. Prototype work on Apollo-M1 and MIA-1.
-- **Private Equity, Maxus Capital**, 2025. LBO and secondary models for six IC-track deals across a EUR 620m platform.
-- **Founder, Yokushi**, Jan 2018 to Aug 2021. Built and automated multi-channel storefronts, reaching EUR 10k revenue in under 40 days.
-
-## Leadership
-
-- Team lead and winner, Q-Summit Hackathon, with an AI-agent-based staffing platform tailored for Exxeta.
-- Assistant to Head of Hackathon, Q-Summit Hackathon, securing EUR 20k+ in corporate sponsorships from partners including Microsoft and IBM.
-- Head of Marketing, 180 Degrees Consulting, leading digital marketing, website redesign, social media execution, and quality-control setup.
-
-## Languages
-
-English, German, and Chinese (HSK5).
+My entire life I have been competitive, whether it was reading competitions, chess, math olympiads, or robotics competitions. There were a few periods where I struggled a lot with confidence, but luckily that is no longer the case. I know what I must do, and I will succeed at it.
