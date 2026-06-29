@@ -27,7 +27,7 @@ enableRobotsTXT = true
 
   [params.homeInfoParams]
     Title = 'Benji'
-    Content = 'Essays, notes, and project traces from a curious mind. The goal is a small body of work that rewards careful reading.'
+    Content = 'Essays, notes, and project traces. I write to make thinking inspectable — clear claims, careful structure, durable ideas.'
 
 [taxonomies]
   category = 'categories'
@@ -35,32 +35,22 @@ enableRobotsTXT = true
 
 [menu]
   [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/'
-    weight = 10
-  [[menu.main]]
     identifier = 'writing'
     name = 'Writing'
     url = 'posts/'
-    weight = 20
+    weight = 10
   [[menu.main]]
     identifier = 'notes'
     name = 'Notes'
     url = 'notes/'
-    weight = 30
+    weight = 20
   [[menu.main]]
     identifier = 'portfolio'
     name = 'Portfolio'
     url = 'portfolio/'
-    weight = 40
+    weight = 30
   [[menu.main]]
     identifier = 'reading'
     name = 'Reading'
     url = 'books/'
-    weight = 50
-  [[menu.main]]
-    identifier = 'categories'
-    name = 'Categories'
-    url = 'categories/'
-    weight = 60
+    weight = 40
