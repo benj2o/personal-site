@@ -1,6 +1,6 @@
 baseURL = 'https://benj2o.github.io/personal-site/'
 locale = 'en-us'
-title = 'Benji'
+title = 'Benjamin Chen'
 theme = 'PaperMod'
 
 enableRobotsTXT = true
@@ -10,8 +10,8 @@ enableRobotsTXT = true
 
 [params]
   env = 'production'
-  author = 'BC'
-  description = 'Notes, essays, and projects from a curious mind.'
+  author = 'Benjamin Chen'
+  description = 'Benjamin Chen is a TUM aerospace engineering student working across world models, vision-language systems, robotics, and applied research.'
   defaultTheme = 'light'
   disableThemeToggle = true
   hideFooter = true
@@ -23,11 +23,37 @@ enableRobotsTXT = true
   ShowToc = true
   TocOpen = false
   DateFormat = 'January 2, 2006'
-  mainSections = ['posts']
+  mainSections = ['projects']
 
-  [params.homeInfoParams]
-    Title = 'Benji'
-    Content = 'Essays, notes, and project traces. I write to make thinking inspectable — clear claims, careful structure, durable ideas.'
+  [params.profile]
+    name = 'Benjamin Chen'
+    role = 'Aerospace Engineering, Technical University Munich'
+    tagline = 'AI research, world models, robotics, and applied technical systems.'
+    location = 'Munich, Germany'
+    email = 'benjaminchen.applications@gmail.com'
+    phone = '+49 1573 0175706'
+    image = 'images/profile.png'
+    languages = 'English, German, Chinese (HSK5)'
+    interests = [
+      'World models and JEPA',
+      'Vision-language systems',
+      'Robotics and autonomy',
+      'Geospatial data management',
+      'Technical systems and strategy'
+    ]
+    education = [
+      'Technical University Munich, Aerospace Engineering coursework, 4.0/4.0 GPA (WES)',
+      'University of Mannheim, BSc Business Administration, 4.0/4.0 GPA (WES)',
+      'GMAT Focus 715, top <1%'
+    ]
+
+    [[params.profile.links]]
+      name = 'Email'
+      url = 'mailto:benjaminchen.applications@gmail.com'
+
+    [[params.profile.links]]
+      name = 'GitHub'
+      url = 'https://github.com/benj2o'
 
 [taxonomies]
   category = 'categories'
@@ -35,22 +61,17 @@ enableRobotsTXT = true
 
 [menu]
   [[menu.main]]
-    identifier = 'writing'
-    name = 'Writing'
-    url = 'posts/'
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
     weight = 10
   [[menu.main]]
-    identifier = 'notes'
-    name = 'Notes'
-    url = 'notes/'
+    identifier = 'about'
+    name = 'About'
+    url = 'about/'
     weight = 20
-  [[menu.main]]
-    identifier = 'portfolio'
-    name = 'Portfolio'
-    url = 'portfolio/'
-    weight = 30
   [[menu.main]]
     identifier = 'reading'
     name = 'Reading'
-    url = 'books/'
-    weight = 40
+    url = 'reading/'
+    weight = 30

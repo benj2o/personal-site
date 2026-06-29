@@ -1,0 +1,46 @@
+{{- $profile := site.Params.profile }}
+<aside class="profile-sidebar" aria-label="Profile details">
+  <div class="profile-card">
+    {{- $img := resources.Get $profile.image }}
+    {{- if $img }}
+      {{- $avatar := $img.Fill "112x112 Center" }}
+      <img class="profile-avatar" src="{{ $avatar.RelPermalink }}" width="56" height="56" alt="{{ $profile.name }}">
+    {{- end }}
+
+    <h2>{{ $profile.name }}</h2>
+    <p class="sidebar-role">{{ $profile.role }}</p>
+    <p class="sidebar-location">{{ $profile.location }}</p>
+
+    <div class="sidebar-block">
+      <h3>Interests</h3>
+      <ul>
+        {{- range $profile.interests }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <h3>Education</h3>
+      <ul>
+        {{- range $profile.education }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <h3>Links</h3>
+      <div class="sidebar-links">
+        {{- range $profile.links }}
+        <a href="{{ .url }}" {{ if strings.HasPrefix .url "http" }}target="_blank" rel="noopener"{{ end }}>{{ .name }}</a>
+        {{- end }}
+      </div>
+    </div>
+
+    <div class="sidebar-block">
+      <h3>Languages</h3>
+      <p>{{ $profile.languages }}</p>
+    </div>
+  </div>
+</aside>

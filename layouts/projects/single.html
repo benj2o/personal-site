@@ -1,0 +1,68 @@
+{{- define "main" }}
+<article class="locked-story">
+  <a class="back-link" href="{{ "" | absURL }}">Back to profile</a>
+
+  <header class="locked-story-header">
+    <p class="eyebrow">Member preview</p>
+    <h1>{{ .Title }}</h1>
+    <div class="locked-story-meta">
+      {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
+      {{- if .Date }}<span>{{ .Date.Format "January 2006" }}</span>{{- end }}
+    </div>
+    {{- with .Params.summary }}
+    <p class="locked-story-summary">{{ . }}</p>
+    {{- end }}
+  </header>
+
+  <div class="locked-story-teaser md-content">
+    {{ .Content }}
+  </div>
+
+  <section class="member-fade" aria-label="Members only notice">
+    <div class="member-card">
+      <span class="member-lock" aria-hidden="true">Locked</span>
+      <h2>Member-only story</h2>
+      <p>This research note is available to approved readers. The public profile keeps only a short preview visible.</p>
+      <button class="member-button" type="button" data-member-open>Sign up to read</button>
+    </div>
+  </section>
+</article>
+
+<div class="member-modal" data-member-modal aria-hidden="true">
+  <div class="member-modal-panel" role="dialog" aria-modal="true" aria-labelledby="member-modal-title">
+    <button class="member-modal-close" type="button" data-member-close aria-label="Close">Close</button>
+    <p class="eyebrow">Membership</p>
+    <h2 id="member-modal-title">Access is closed</h2>
+    <p>Membership is currently invite-only and closed to new readers.</p>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const modal = document.querySelector("[data-member-modal]");
+    const open = document.querySelector("[data-member-open]");
+    const close = document.querySelector("[data-member-close]");
+
+    if (!modal || !open || !close) return;
+
+    const show = () => {
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("member-modal-open");
+    };
+
+    const hide = () => {
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("member-modal-open");
+    };
+
+    open.addEventListener("click", show);
+    close.addEventListener("click", hide);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) hide();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") hide();
+    });
+  })();
+</script>
+{{- end }}

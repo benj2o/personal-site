@@ -1,4 +1,4 @@
 ---
-title: "About"
-description: "A small, curated personal site for essays, notes, projects, and reading."
+title: "Benjamin Chen"
+description: "Research profile for Benjamin Chen across AI, world models, robotics, and applied technical systems."
 ---

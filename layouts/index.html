@@ -1,0 +1,61 @@
+{{- define "main" }}
+{{- $profile := site.Params.profile }}
+{{- $projects := where site.RegularPages "Type" "projects" }}
+{{- $projects = sort $projects "Date" "desc" }}
+
+<section class="profile-shell">
+  <div class="profile-main">
+    <header class="profile-header">
+      <p class="eyebrow">Research profile</p>
+      <h1>{{ $profile.name | default site.Title }}</h1>
+      <p class="profile-subtitle">{{ $profile.tagline }}</p>
+    </header>
+
+    <nav class="profile-tabs" aria-label="Profile navigation">
+      <a class="active" href="{{ "" | absURL }}">Home</a>
+      <a href="{{ "about/" | absURL }}">About</a>
+      <a href="{{ "reading/" | absURL }}">Reading</a>
+    </nav>
+
+    <section class="project-feed" aria-labelledby="projects-heading">
+      <div class="section-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <p>Brief research and execution notes. Full entries are limited to members.</p>
+      </div>
+
+      {{- if gt (len $projects) 0 }}
+      <div class="project-card-list">
+        {{- range $projects }}
+        <article class="project-card">
+          <a class="project-card-link" href="{{ .RelPermalink }}" aria-label="Open preview for {{ .Title }}">
+            <div class="project-card-copy">
+              <div class="project-card-meta">
+                {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
+                {{- if .Date }}<span>{{ .Date.Format "Jan 2006" }}</span>{{- end }}
+              </div>
+              <h3>{{ .Title }}</h3>
+              {{- with .Params.summary }}
+              <p>{{ . }}</p>
+              {{- else }}
+              <p>{{ .Summary | plainify | htmlUnescape }}</p>
+              {{- end }}
+              <div class="project-card-footer">
+                <span class="lock-pill">Member preview</span>
+                <span class="read-time">Brief preview</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        {{- end }}
+      </div>
+      {{- else }}
+      <div class="empty-state">
+        <p>Project previews are being assembled.</p>
+      </div>
+      {{- end }}
+    </section>
+  </div>
+
+  {{ partial "profile_sidebar.html" . }}
+</section>
+{{- end }}
