@@ -4,11 +4,10 @@ date: 2025-11-01
 role: "Starcloud, Cape Canaveral"
 summary: "Why datacenters in space matter and meeting the team for the first time."
 previewImage: "images/sc-1-launch-event.png"
+membersOnly: true
 tags: ["space", "datacenters", "starcloud"]
 hideMeta: true
 searchHidden: true
 ---
 
-SC-1 made the idea feel much less abstract. Datacenters in space sound strange until you start thinking about energy, heat, latency, launch costs, and how quickly compute demand is growing.
-
-Meeting the team for the first time at Cape Canaveral made it obvious why the problem is worth taking seriously.
+A year (and a bit) ago, I discovered Starcloud. A super exciting and ambitious company, aiming to deploy data centers in space. After initially connecting with one of the co-founders, I recently traveled to the US for the launch. The entire trip was a remarkably positive experience. Witnessing the event at Cape Canaveral was spectacular, and meeting the team in person made the profound importance of their mission absolutely clear.

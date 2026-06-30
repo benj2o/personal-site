@@ -11,6 +11,17 @@
     <p class="sidebar-role">{{ $profile.role }}</p>
     <p class="sidebar-location">{{ $profile.location }}</p>
 
+    {{- with $profile.research }}
+    <div class="sidebar-block">
+      <h3>Research</h3>
+      <ul>
+        {{- range . }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+
     <div class="sidebar-block">
       <h3>Interests</h3>
       <ul>

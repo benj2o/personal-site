@@ -4,14 +4,18 @@ hideMeta: true
 ShowToc: false
 ---
 
-Hey, my name is Benji. I was born and raised in Aachen by two engineers, together with my older brother, who is now becoming a doctor.
+Hey, my name is Benji. I was born and raised in Aachen by two engineers, alongside my older brother who is now becoming a doctor. I grew up around competition, whether it was reading competitions, where I ranked 1st across all age groups, mathematics, where I became the youngest member of the school's olympiad team, or chess and robotics.
 
-For as long as I can remember, I have been fascinated by space, the stars, and life beyond them. I am currently studying aerospace, doing AI research at TUM, and plan to start my Master's in Management in August.
+I play 3 different instruments and have done about every sport one can think of, from standard and latin dance to kickboxing, soccer and fencing.
 
-I had my first little company when I was 15. It was called Yokushi, and it taught me that I am a builder at heart. I have been fortunate enough to work across strategy, startups, venture capital, and private equity, but deep down I have always been and always will be a founder.
+In my free time, I love to read and cook. They are my two favorite hobbies alongside sports. In Munich, the Eisbach is right by my house, allowing me to go running and take a quick dip in the river almost every day.
 
-I think we are living through a scary but potentially fruitful period of time, with technological change advancing faster than ever before. Taking from Mira Murati, if we assume we have more agency and control than we believe, then we should do our best to steer humanity in a positive direction.
+---
 
-In my free time I love to read and cook. They are probably my two favorite hobbies, besides sports of course. In Munich we have the Eisbach very close to my house, so I can go running and then take a quick dip or swing into the river almost every day.
+For as long as I can remember, I have been fascinated by space and the stars. I now get to study aerospace and conduct AI research at TUM, while preparing to start my Master’s in Management in August.
 
-My entire life I have been competitive, whether it was reading competitions, chess, math olympiads, or robotics competitions. There were a few periods where I struggled a lot with confidence, but luckily that is no longer the case. I know what I must do, and I will succeed at it.
+I started my first company, Yokushi, when I was 15. It taught me I am a builder at heart. My subsequent work across strategy, startups, venture capital, and private equity taught me so much, but mostly solidified one fact. I will always be a founder.
+
+We are living through a consequential period of rapid technological change. Taking from Mira Murati, if we assume we have more agency and control than we believe, we have a responsibility to steer humanity in a positive direction.
+
+We only have one shot at making life better for our children and I have absolute confidence, that we can do so. But it will not be easy.

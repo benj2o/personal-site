@@ -18,8 +18,9 @@
       {{- if gt (len $projects) 0 }}
       <div class="project-card-list">
         {{- range $projects }}
+        {{- $membersOnly := ne .Params.membersOnly false }}
         <article class="project-card">
-          <a class="project-card-link" href="{{ .RelPermalink }}" aria-label="Open preview for {{ .Title }}">
+          <a class="project-card-link" href="{{ .RelPermalink }}" aria-label="{{ if $membersOnly }}Open preview for{{ else }}Read{{ end }} {{ .Title }}">
             <div class="project-card-copy">
               <div class="project-card-meta">
                 {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
@@ -32,8 +33,13 @@
               <p>{{ .Summary | plainify | htmlUnescape }}</p>
               {{- end }}
               <div class="project-card-footer">
+                {{- if $membersOnly }}
                 <span>Members only</span>
                 <span>Preview</span>
+                {{- else }}
+                <span class="project-card-badge-open">Most recent</span>
+                <span>Read now</span>
+                {{- end }}
               </div>
             </div>
             {{- with .Params.previewImage }}

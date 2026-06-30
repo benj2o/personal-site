@@ -4,6 +4,7 @@ date: 2026-04-01
 role: "Independent Research, School of Engineering"
 summary: "What gets thrown away when a vision-language model learns to look."
 previewImage: "images/ai-research-paper.png"
+membersOnly: true
 tags: ["vlm", "medical-ai", "evaluation"]
 hideMeta: true
 searchHidden: true

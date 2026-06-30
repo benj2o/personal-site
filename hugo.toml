@@ -37,15 +37,22 @@ enableRobotsTXT = true
     phone = '+49 1573 0175706'
     image = 'images/profile.png'
     languages = 'English, German, Chinese, Spanish (currently learning)'
+    research = [
+      'Youngest researcher at TUM chair',
+      'Large language and vision-language models',
+      'World models',
+      'Robotics'
+    ]
     interests = [
       'World models and JEPA',
       'Robotics and general autonomy',
       'Healthcare and Bio',
-      'Philosophy & Self-improvement'
+      'Philosophy & Self-improvement',
+      'French cuisine'
     ]
     education = [
-      'Technical University Munich, Aerospace Engineering coursework, 4.0/4.0 GPA (WES)',
-      'University of Mannheim, BSc Business Administration, 4.0/4.0 GPA (WES)',
+      'Technical University Munich, BS Aerospace, 4.0/4.0 GPA (WES)',
+      'University of Mannheim, BS Business Administration, 4.0/4.0 GPA (WES)',
       'GMAT Focus 715, top <1%'
     ]
 
@@ -56,6 +63,11 @@ enableRobotsTXT = true
 [taxonomies]
   category = 'categories'
   tag = 'tags'
+
+[markup.goldmark.parser]
+  [markup.goldmark.parser.attribute]
+    block = true
+    title = true
 
 [menu]
   [[menu.main]]

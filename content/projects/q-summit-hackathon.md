@@ -4,6 +4,7 @@ date: 2025-04-01
 role: "Team Lead and Hackathon Winner"
 summary: "Winning my first ever hackathon was quite easy actually ;)"
 previewImage: "images/q-summit-hackathon.png"
+membersOnly: true
 tags: ["ai-agents", "leadership", "product"]
 hideMeta: true
 searchHidden: true

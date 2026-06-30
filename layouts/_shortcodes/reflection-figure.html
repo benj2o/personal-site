@@ -1,0 +1,10 @@
+{{- $path := .Get "src" -}}
+{{- $caption := .Get "caption" -}}
+{{- $alt := .Get "alt" | default $caption -}}
+{{- $img := resources.Get $path -}}
+<figure class="reflection-figure">
+  <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ $alt }}">
+  {{- with $caption -}}
+  <figcaption><p>{{ . }}</p></figcaption>
+  {{- end -}}
+</figure>

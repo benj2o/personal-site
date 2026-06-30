@@ -1,9 +1,14 @@
 {{- define "main" }}
+{{- $membersOnly := ne .Params.membersOnly false }}
 <article class="locked-story">
   <a class="back-link" href="{{ "" | absURL }}">Back to profile</a>
 
   <header class="locked-story-header">
+    {{- if $membersOnly }}
     <p class="eyebrow">Member preview</p>
+    {{- else }}
+    <p class="eyebrow">Article</p>
+    {{- end }}
     <h1>{{ .Title }}</h1>
     <div class="locked-story-meta">
       {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
@@ -11,10 +16,11 @@
     </div>
   </header>
 
-  <div class="locked-story-teaser md-content">
+  <div class="{{ if $membersOnly }}locked-story-teaser{{ else }}article-story-content{{ end }} md-content">
     {{ .Content }}
   </div>
 
+  {{- if $membersOnly }}
   <section class="member-fade" aria-label="Members only notice">
     <div class="member-card">
       <span class="member-lock" aria-hidden="true">Locked</span>
@@ -23,8 +29,10 @@
       <button class="member-button" type="button" data-member-open>Sign up to read</button>
     </div>
   </section>
+  {{- end }}
 </article>
 
+{{- if $membersOnly }}
 <div class="member-modal" data-member-modal aria-hidden="true">
   <div class="member-modal-panel" role="dialog" aria-modal="true" aria-labelledby="member-modal-title">
     <button class="member-modal-close" type="button" data-member-close aria-label="Close">Close</button>
@@ -84,4 +92,5 @@
     });
   })();
 </script>
+{{- end }}
 {{- end }}

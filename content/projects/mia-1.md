@@ -4,6 +4,7 @@ date: 2026-04-02
 role: "Robotics Research, Apollo Robotics"
 summary: "Autonomous drone defense for a safer Europe."
 previewImage: "images/mia-1.png"
+membersOnly: true
 tags: ["robotics", "autonomy", "defense"]
 hideMeta: true
 searchHidden: true
