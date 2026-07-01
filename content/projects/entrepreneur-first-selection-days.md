@@ -16,9 +16,9 @@ Entrepreneur First is an international business incubator and venture capital fi
 ### Intro
 {.reflection-heading}
 
-EF was a useful reminder that founder judgment often only surfaces under pressure, which applies to both myself and others. Everyone invited to London is already pre-selected as the top 1% of talent and looks exceptional on a resume. Nevertheless, you immediately get the impression that certain people are clearly more or less potent than others. Just by observing, I made four out of four correct guesses on who would proceed to the next round.
+I generally dislike how much of founder events can feel like cosplaying. A group of people come together, and much of it turns into acting for the title, rehearsed advice, and overused terms like "Building", "Shipping", "Cracked", and "Democratizing". The defeatism about politics and the EU does not help.
 
-I also noticed a significant amount of founder and investor cosplaying in the current industry. This involves acting as a founder or VC merely for the sake of the title. It includes reciting the right advice, giving rehearsed speeches, and casually overusing terms like "Building" and "Shipping" alongside words like "Cracked" and "Democratizing". The constant defeatism about politics and the EU I found insufferable. Overall, EF was a wonderful and worthwhile experience, and I would recommend everyone apply.
+Overall, I was quite happy and pleasantly surprised with EF. Everyone invited to London is pre-selected as the top 1% of talent and looks exceptional on a resume. Nonetheless, of course, it was still quite easy to spot the stronger founders from the less potent ones. Founder judgment often only surfaces under pressure, which applies to both myself and others. Just by observing, I made four out of four correct guesses on who would proceed to the next round. It was a worthwhile experience, and I recommend everyone apply.
 
 ### Sunday (Day before)
 {.reflection-heading}
