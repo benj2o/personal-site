@@ -5,6 +5,7 @@ role: "Robotics Research, Apollo Robotics"
 summary: "Autonomous drone defense for a safer Europe."
 previewImage: "images/mia-1.png"
 membersOnly: true
+topic: "AI & Robotics"
 tags: ["robotics", "autonomy", "defense"]
 hideMeta: true
 searchHidden: true

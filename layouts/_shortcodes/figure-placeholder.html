@@ -1,0 +1,15 @@
+{{- $id := .Get "id" -}}
+{{- $caption := .Get "caption" -}}
+{{- $source := .Get "source" -}}
+<figure class="figure-placeholder"{{ with $id }} id="fig-{{ . }}"{{ end }}>
+  <div class="figure-placeholder-frame">
+    <span class="figure-placeholder-tag">Figure</span>
+    <span class="figure-placeholder-hint">Image to add</span>
+  </div>
+  {{- with $caption }}
+  <figcaption>
+    <p>{{ . }}</p>
+    {{- with $source }}<span class="figure-placeholder-source">Source to add: {{ . }}</span>{{ end }}
+  </figcaption>
+  {{- end }}
+</figure>

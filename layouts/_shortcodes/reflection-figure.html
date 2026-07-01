@@ -3,7 +3,15 @@
 {{- $alt := .Get "alt" | default $caption -}}
 {{- $img := resources.Get $path -}}
 <figure class="reflection-figure">
-  <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ $alt }}">
+  {{- with $img -}}
+  <img
+    loading="lazy"
+    decoding="async"
+    src="{{ .RelPermalink }}"
+    srcset="{{ .RelPermalink }} {{ .Width }}w"
+    sizes="(max-width: 763px) 78vw, 595px"
+    alt="{{ $alt }}">
+  {{- end -}}
   {{- with $caption -}}
   <figcaption><p>{{ . }}</p></figcaption>
   {{- end -}}

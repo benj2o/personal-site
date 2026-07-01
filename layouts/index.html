@@ -1,7 +1,13 @@
 {{- define "main" }}
 {{- $profile := site.Params.profile }}
 {{- $projects := where site.RegularPages "Type" "projects" }}
-{{- $projects = sort $projects "Date" "desc" }}
+{{- $visible := slice }}
+{{- range $projects }}
+  {{- if not .Params.archived }}
+    {{- $visible = $visible | append . }}
+  {{- end }}
+{{- end }}
+{{- $projects = sort $visible "Date" "desc" }}
 
 <section class="profile-shell">
   <div class="profile-main">
@@ -12,17 +18,29 @@
 
     <section class="project-feed" aria-labelledby="projects-heading">
       <div class="section-heading">
-        <h2 id="projects-heading">Projects</h2>
+        <h2 id="projects-heading">Projects & Writing</h2>
       </div>
 
       {{- if gt (len $projects) 0 }}
+      <div class="topic-filter" role="tablist" aria-label="Filter projects and writing by topic">
+        <button class="topic-chip is-active" type="button" data-topic-filter="all" aria-pressed="true">All</button>
+        <button class="topic-chip" type="button" data-topic-filter="AI & Robotics" aria-pressed="false">AI &amp; Robotics</button>
+        <button class="topic-chip" type="button" data-topic-filter="Space" aria-pressed="false">Space</button>
+        <button class="topic-chip" type="button" data-topic-filter="Energy" aria-pressed="false">Energy</button>
+        <button class="topic-chip" type="button" data-topic-filter="Nuclear" aria-pressed="false">Nuclear</button>
+        <button class="topic-chip" type="button" data-topic-filter="Medicine" aria-pressed="false">Medicine</button>
+        <button class="topic-chip" type="button" data-topic-filter="Personal" aria-pressed="false">Personal</button>
+        <button class="topic-chip" type="button" data-topic-filter="Other" aria-pressed="false">Other</button>
+      </div>
       <div class="project-card-list">
         {{- range $projects }}
         {{- $membersOnly := ne .Params.membersOnly false }}
-        <article class="project-card">
+        {{- $topic := .Params.topic | default "Other" }}
+        <article class="project-card" data-topic="{{ $topic }}">
           <a class="project-card-link" href="{{ .RelPermalink }}" aria-label="{{ if $membersOnly }}Open preview for{{ else }}Read{{ end }} {{ .Title }}">
             <div class="project-card-copy">
               <div class="project-card-meta">
+                <span>{{ $topic }}</span>
                 {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
                 {{- if .Date }}<span>{{ .Date.Format "Jan 2006" }}</span>{{- end }}
               </div>
@@ -52,6 +70,7 @@
           </a>
         </article>
         {{- end }}
+        <p class="project-empty is-hidden" data-empty-state>No projects in this topic yet.</p>
       </div>
       {{- else }}
       <div class="empty-state">
@@ -63,4 +82,38 @@
 
   {{ partial "profile_sidebar.html" . }}
 </section>
+
+<script>
+  (() => {
+    const chips = Array.from(document.querySelectorAll("[data-topic-filter]"));
+    const cards = Array.from(document.querySelectorAll("[data-topic]"));
+    const emptyState = document.querySelector("[data-empty-state]");
+    const normalizeTopic = (value) => (value || "").trim().toLowerCase();
+
+    if (!chips.length || !cards.length) return;
+
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        const selectedTopic = normalizeTopic(chip.dataset.topicFilter);
+        let visibleCount = 0;
+
+        chips.forEach((button) => {
+          const isSelected = button === chip;
+          button.classList.toggle("is-active", isSelected);
+          button.setAttribute("aria-pressed", String(isSelected));
+        });
+
+        cards.forEach((card) => {
+          const shouldShow = selectedTopic === "all" || normalizeTopic(card.dataset.topic) === selectedTopic;
+          card.classList.toggle("is-hidden", !shouldShow);
+          if (shouldShow) visibleCount += 1;
+        });
+
+        if (emptyState) {
+          emptyState.classList.toggle("is-hidden", visibleCount !== 0);
+        }
+      });
+    });
+  })();
+</script>
 {{- end }}

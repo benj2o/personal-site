@@ -5,6 +5,7 @@ role: "AI Research, TUM Chair of Geospatial Data Management"
 summary: "Can computers learn the world? And why persistence matters in life."
 previewImage: "images/world-model-practical.png"
 membersOnly: true
+topic: "AI & Robotics"
 tags: ["world-models", "jepa", "research"]
 hideMeta: true
 searchHidden: true

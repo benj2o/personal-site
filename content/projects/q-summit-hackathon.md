@@ -5,6 +5,7 @@ role: "Team Lead and Hackathon Winner"
 summary: "Winning my first ever hackathon was quite easy actually ;)"
 previewImage: "images/q-summit-hackathon.png"
 membersOnly: true
+topic: "AI & Robotics"
 tags: ["ai-agents", "leadership", "product"]
 hideMeta: true
 searchHidden: true

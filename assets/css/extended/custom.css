@@ -23,6 +23,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    zoom: 0.85;
 }
 
 .list {
@@ -88,7 +89,7 @@ body {
 .profile-header h1 {
     margin: 0;
     color: var(--primary);
-    font-size: clamp(42px, 6.2vw, 58px);
+    font-size: clamp(40px, 5.8vw, 54px);
     font-weight: 760;
     letter-spacing: -0.06em;
     line-height: 1;
@@ -131,8 +132,52 @@ body {
     letter-spacing: -0.025em;
 }
 
+.topic-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 16px;
+}
+
+.topic-chip {
+    appearance: none;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--theme);
+    color: var(--secondary);
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    line-height: 1;
+    padding: 8px 12px;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.topic-chip:hover,
+.topic-chip:focus-visible,
+.topic-chip.is-active {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: var(--theme);
+}
+
+.topic-chip:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
 .project-card-list {
     margin-top: 4px;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.project-empty {
+    padding: 24px 0;
+    color: var(--secondary);
+    font-size: 0.95rem;
 }
 
 .project-card {
@@ -378,7 +423,8 @@ body {
 }
 
 .article-story-content .reflection-figure,
-.post-content .reflection-figure {
+.post-content .reflection-figure,
+.locked-story-teaser .reflection-figure {
     position: relative;
     width: min(78vw, 595px);
     margin: 3.25rem auto;
@@ -386,10 +432,12 @@ body {
 }
 
 .article-story-content .reflection-figure img,
-.post-content .reflection-figure img {
+.post-content .reflection-figure img,
+.locked-story-teaser .reflection-figure img {
     display: block;
-    width: 100%;
+    width: auto;
     max-width: 100%;
+    height: auto;
     margin: 0 auto;
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -397,7 +445,8 @@ body {
 }
 
 .article-story-content .reflection-figure figcaption p,
-.post-content .reflection-figure figcaption p {
+.post-content .reflection-figure figcaption p,
+.locked-story-teaser .reflection-figure figcaption p {
     margin: 0.85rem 0 0;
     color: var(--secondary);
     font-size: 14px;
@@ -405,6 +454,14 @@ body {
     font-style: italic;
     line-height: 1.45;
     text-align: center;
+}
+
+.md-content figure.reflection-figure {
+    margin-block: 3.25rem;
+}
+
+.md-content figure.reflection-figure > figcaption {
+    margin: 0;
 }
 
 .post-content ul {
@@ -457,6 +514,18 @@ body {
     color: #333;
     font-size: 18px;
     line-height: 1.68;
+}
+
+.locked-story-teaser:has(.reflection-figure) {
+    max-height: 220px;
+}
+
+.locked-story-teaser .reflection-figure {
+    margin: 1.1rem auto 0;
+}
+
+.locked-story:has(.locked-story-teaser .reflection-figure) .member-fade {
+    margin-top: 14px;
 }
 
 .locked-story-teaser::after {
@@ -676,4 +745,166 @@ code {
     .member-form-row {
         grid-template-columns: 1fr;
     }
+}
+
+/* Article internal cross-links: electric blue, echoing the "Most recent" tag. */
+.article-story-content .article-cross-link,
+.post-content .article-cross-link {
+    display: inline;
+    padding: 1px 8px 2px;
+    border: 1px solid rgba(0, 108, 255, 0.34);
+    border-radius: 999px;
+    background: #eef6ff;
+    color: #0057d8;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 140ms ease, border-color 140ms ease;
+}
+
+.article-story-content .article-cross-link:hover,
+.post-content .article-cross-link:hover {
+    background: #e0efff;
+    border-color: rgba(0, 108, 255, 0.55);
+    text-decoration: none;
+}
+
+/* Tables: clean, modern, scoped to article body. */
+.article-story-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.25rem 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.article-story-content table thead th {
+    background: #f7f9fc;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+}
+
+.article-story-content table th,
+.article-story-content table td {
+    padding: 9px 14px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+    text-align: left;
+}
+
+.article-story-content table tbody tr:nth-child(even) {
+    background: #fafbfc;
+}
+
+/* Superscript citation markers. */
+.article-story-content a.footnote-ref {
+    padding: 0 1px;
+    color: #0057d8;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+/* References block rendered from Markdown footnotes. */
+.article-story-content .footnotes {
+    margin-top: 3.25rem;
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.article-story-content .footnotes hr {
+    margin: 0 0 18px;
+    height: 1px;
+    background: var(--border);
+    border: 0;
+}
+
+.article-story-content .footnotes ol {
+    padding-left: 1.25rem;
+}
+
+.article-story-content .footnotes li {
+    margin: 0.45rem 0;
+    padding-left: 4px;
+}
+
+.article-story-content .footnotes li::marker {
+    color: #0057d8;
+    font-weight: 650;
+}
+
+.article-story-content .footnotes p {
+    margin: 0;
+}
+
+.article-story-content .footnotes a {
+    color: #4a4a4a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    text-underline-offset: initial;
+}
+
+.article-story-content .footnotes a:hover {
+    color: #0057d8;
+    border-color: rgba(0, 108, 255, 0.5);
+}
+
+.article-story-content .footnote-backref {
+    margin-left: 6px;
+    color: #0057d8 !important;
+    border-bottom: 0 !important;
+}
+
+/* Figure placeholders: dashed frame for images to source later. */
+.article-story-content .figure-placeholder {
+    width: min(78vw, 595px);
+    margin: 3.25rem auto;
+    text-align: center;
+}
+
+.article-story-content .figure-placeholder-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 210px;
+    border: 1px dashed rgba(0, 108, 255, 0.4);
+    border-radius: 8px;
+    background: repeating-linear-gradient(45deg, #f7fbff, #f7fbff 12px, #eef6ff 12px, #eef6ff 24px);
+}
+
+.article-story-content .figure-placeholder-tag {
+    color: #0057d8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.article-story-content .figure-placeholder-hint {
+    color: var(--secondary);
+    font-size: 13px;
+}
+
+.article-story-content .figure-placeholder figcaption {
+    margin-top: 0.85rem;
+}
+
+.article-story-content .figure-placeholder figcaption p {
+    margin: 0;
+    color: var(--secondary);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+.article-story-content .figure-placeholder-source {
+    display: block;
+    margin-top: 4px;
+    color: #9a9a9a;
+    font-size: 12px;
+    font-style: normal;
 }

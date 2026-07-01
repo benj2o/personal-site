@@ -5,6 +5,7 @@ role: "Starcloud, Cape Canaveral"
 summary: "Why datacenters in space matter and meeting the team for the first time."
 previewImage: "images/sc-1-launch-event.png"
 membersOnly: true
+topic: "Space"
 tags: ["space", "datacenters", "starcloud"]
 hideMeta: true
 searchHidden: true

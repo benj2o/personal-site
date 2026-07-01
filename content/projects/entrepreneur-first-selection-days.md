@@ -5,6 +5,7 @@ role: "Founder selection, London"
 summary: "Founder judgment under pressure, spotting talent, and what two days in London actually teach you."
 previewImage: "images/entrepreneurs-first.png"
 membersOnly: false
+topic: "Personal"
 tags: ["founder", "selection", "startups"]
 hideMeta: true
 searchHidden: true
@@ -33,7 +34,7 @@ I had already shortlisted the cohort beforehand. By the time the second speech e
 
 By late Monday, we realized we had been working too closely for too long in the hope of forcing a solution, and that we were better off splitting up. Our early momentum had caused us to rest on our laurels before the rest of the room even started. We recognized that the true benefit of the event was maximizing the number of people and ideas we engaged with to develop our ideation muscle, rather than being blinded by an attachment to a specific issue.
 
-S.H. and I could easily resume working on radiopharmaceuticals on any other occasion if it proved commercially viable.
+S.H. and I could easily resume working on radiopharmaceuticals on any other occasion if it proved commercially viable. I later kept pulling on one of our threads and wrote up what I found in {{< cross-link href="projects/decentralizing-cardiac-scintigraphy/" text="decentralizing cardiac scintigraphy" >}}.
 
 ### Tuesday
 {.reflection-heading}
