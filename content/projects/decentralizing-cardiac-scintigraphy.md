@@ -17,7 +17,7 @@ This started as one of the ideas I explored with my friend S.H., a nuclear engin
 ### How This Started
 {.reflection-heading}
 
-At {{< cross-link href="projects/entrepreneur-first-selection-days/" text="Entrepreneur First selection days" >}}, S.H. and I spent a day on the logistics behind radiopharmaceuticals. We assumed the problem was getting the isotope to the patient.
+At {{< cross-link href="projects/entrepreneur-first-selection-days/" text="Entrepreneur First Selection Days" >}}, S.H. and I spent a day on the logistics behind radiopharmaceuticals. We assumed the problem was getting the isotope to the patient.
 
 Talking to doctors changed my mind. We called Dr S.A., an NHS interventional cardiologist at a district general hospital in Lincolnshire. He runs a 16-cardiologist department in a rural catchment, and he was clear that isotope supply was not his constraint. His constraint was that he could not run one specific scan locally at all. To get it, he sends patients to London. He pointed us to his colleague, Dr Basu, who has reported nuclear cardiology for around 20 years and had been trying to stand up the same scan locally for roughly 18 months without success.
 

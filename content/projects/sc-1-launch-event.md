@@ -1,5 +1,5 @@
 ---
-title: "SC-1 Launch Event"
+title: "Attending the SC-1 Launch Event"
 date: 2025-11-01
 role: "Starcloud, Cape Canaveral"
 summary: "Why datacenters in space matter and meeting the team for the first time."

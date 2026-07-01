@@ -3,7 +3,6 @@ title: "Leaving Private Equity"
 date: 2025-09-01
 role: "Reflection, research transition"
 summary: "Why I stopped pretending that spreadsheets were the whole game."
-previewImage: "images/leaving-private-equity.png"
 membersOnly: true
 topic: "Personal"
 tags: ["career", "private-equity", "research"]

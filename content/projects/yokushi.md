@@ -2,8 +2,7 @@
 title: "Yokushi"
 date: 2018-01-01
 role: "Founder"
-summary: "How I made my very first few Euros working for myself."
-previewImage: "images/yokushi-company.png"
+summary: "How I made my first 10k€ working for myself."
 membersOnly: true
 topic: "Other"
 tags: ["founder", "commerce", "automation"]

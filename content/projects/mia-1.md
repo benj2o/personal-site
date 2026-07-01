@@ -1,5 +1,5 @@
 ---
-title: "MIA-1"
+title: "Building MIA-1 and Regulations"
 date: 2026-04-02
 role: "Robotics Research, Apollo Robotics"
 summary: "Autonomous drone defense for a safer Europe."

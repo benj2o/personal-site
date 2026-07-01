@@ -1,9 +1,8 @@
 ---
-title: "Apollo-M1"
+title: "Raising €5k to Prototype Apollo-M1"
 date: 2026-04-01
 role: "Robotics Research, Apollo Robotics"
-summary: "YC Co-Founder Matching and cool robots."
-previewImage: "images/apollo-m1.png"
+summary: "YC Co-Founder Matching and how to build self-improving painting robots."
 membersOnly: true
 topic: "AI & Robotics"
 tags: ["robotics", "construction", "automation"]

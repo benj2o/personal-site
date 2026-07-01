@@ -747,26 +747,18 @@ code {
     }
 }
 
-/* Article internal cross-links: electric blue, echoing the "Most recent" tag. */
-.article-story-content .article-cross-link,
-.post-content .article-cross-link {
-    display: inline;
-    padding: 1px 8px 2px;
-    border: 1px solid rgba(0, 108, 255, 0.34);
-    border-radius: 999px;
-    background: #eef6ff;
+/* Article internal cross-links: blue inline text, underline on hover. */
+.article-story-content.md-content a.article-cross-link,
+.post-content.md-content a.article-cross-link {
     color: #0057d8;
-    font-weight: 600;
+    font-weight: inherit;
     text-decoration: none;
-    white-space: nowrap;
-    transition: background 140ms ease, border-color 140ms ease;
 }
 
-.article-story-content .article-cross-link:hover,
-.post-content .article-cross-link:hover {
-    background: #e0efff;
-    border-color: rgba(0, 108, 255, 0.55);
-    text-decoration: none;
+.article-story-content.md-content a.article-cross-link:hover,
+.post-content.md-content a.article-cross-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
 }
 
 /* Tables: clean, modern, scoped to article body. */
